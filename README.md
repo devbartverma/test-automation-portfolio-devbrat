@@ -1,60 +1,84 @@
-# Test automation portfolio - Devbrat Verma
+# Test Automation Portfolio – Devbrat Verma
 
-A centralized showcase of modern end-to-end (E2E) testing frameworks, demonstrating best practices in test automation, Page Object Model (POM) design patterns, and automated reporting.
+A modern UI test automation framework built with **TypeScript** and **Playwright**, demonstrating scalable test architecture, maintainable automation design patterns, and QA engineering best practices used in enterprise software development.
 
-## 🚀 Target Applications & Credentials
+> Framework designed and implemented by Devbrat Verma to demonstrate enterprise-grade UI test automation using Playwright, TypeScript, Page Object Model (POM), reporting, and scalable test architecture.
 
-To ensure reliable, reproducible test runs, the frameworks in this repository target public, sandbox applications with the following test credentials:
+## Overview
 
-1. **SauceDemo E-Commerce Platform**  
-   * **URL:** [https://www.saucedemo.com/](https://www.saucedemo.com/)
-   * **Credentials:** `standard_user` / `secret_sauce`
-   * **Scenarios:** E2E shopping cart flows, login validation, sorting filters, and checkout verification.
+This repository showcases my approach to designing and implementing robust automated testing solutions. The framework includes end-to-end test scenarios against public demo applications and demonstrates clean code practices, maintainability, and reliability in test automation.
 
-2. **Practice Test Automation**  
-   * **URL:** [https://practicetestautomation.com/practice-test-login/](https://practicetestautomation.com/practice-test-login/)
-   * **Credentials:** `student` / `Password123`
-   * **Scenarios:** Positive/negative authentication paths and secure area element visibility.
+## Technology Stack
 
----
+* Playwright
+* TypeScript
+* Page Object Model (POM)
+* Playwright Test Runner
+* HTML Reporting
+* Data-Driven Testing
+* Cross-Browser Execution
 
-## 🛠️ Frameworks Included
+## Framework Features
 
-### 1. Playwright (TypeScript)
-*   **Location:** `/playwright`
-*   **Design Pattern:** Page Object Model (POM)
-*   **Key Capabilities:** Multi-browser parallel execution (Chromium, Firefox, WebKit), API request interception, auto-waiting mechanism validation, and visual regression snapshots.
+### Architecture & Design
 
-### 2. Cypress (JavaScript)
-*   **Location:** `/cypress`
-*   **Design Pattern:** App Actions & Custom Commands
-*   **Key Capabilities:** Real-time test runner execution, network mocking/stubbing for isolated UI flows, and custom command abstraction for repetitive login sequences.
+* Page Object Model (POM) implementation
+* Reusable and maintainable page classes
+* Centralized test data management
+* Clear separation of test logic and page interactions
+* Scalable framework structure suitable for enterprise projects
 
----
+### Automation Best Practices
 
-## 🏗️ Project Structure
+* Reliable locator strategies to minimize flaky tests
+* Data-driven test execution
+* Cross-browser testing (Chromium, Firefox, WebKit)
+* Built-in screenshots, traces, and reporting
+* Positive and negative scenario coverage
+* Reusable test components and utilities
 
+## Sample Automated Scenarios
+
+The framework currently includes automated coverage for:
+
+* User authentication
+* Product inventory validation
+* Shopping cart workflows
+* Checkout process validation
+* UI assertions and business flow verification
+
+## Project Structure
+
+```text
+playwrite/
+├── Pages/
+│   ├── LoginPage.ts
+│   ├── InventoryPage.ts
+│   ├── CartPage.ts
+│   └── CheckoutPage.ts
+│
+├── data/
+│   └── testData.ts
+│
+├── tests/
+│   ├── auth.spec.ts
+│   ├── inventory.spec.ts
+│   ├── cart.spec.ts
+│   └── checkout.spec.ts
+│
+├── playwright.config.ts
+├── package.json
+└── package-lock.json
 ```
-test-automation-portfolio/
-│
-├── cypress/               # Cypress implementation
-│   ├── e2e/               # Test spec files
-│   └── support/           # Custom commands and page objects
-│
-├── playwright/            # Playwright implementation
-│   ├── tests/             # Test spec files
-│   └── pages/             # Page Object classes
-│
-├── LICENSE                # MIT License
-└── README.md              # Project documentation
-```
 
----
+## Purpose
 
-## ⚡ Key QA Practices Demonstrated
-*   **Flaky Test Mitigation:** Exclusively utilizing resilient locator strategies, prioritizing `data-test` attributes over brittle CSS paths or XPaths.
-*   **Data-Driven Testing:** Separating test environments from data payloads by integrating JSON fixtures for dynamic login parameters.
-*   **Comprehensive Reporting:** Integrated failure hooks that capture detailed HTML reports, context screenshots, and video assets upon failure.
+This portfolio project demonstrates my expertise in designing, developing, and maintaining modern test automation frameworks. It reflects the engineering practices I use to build scalable, reliable, and maintainable automation solutions for web applications.
 
-## 📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+## Author
+
+**Devbrat Verma**
+
+Senior SDET | Quality Engineering Lead
+
+Specialized in Test Automation, Quality Engineering, and DevOps practices using Playwright, Cypress, Serenity BDD, SpecFlow, Reqnroll, JavaScript, TypeScript, Java, Groovy, and C#, with expertise in scalable automation frameworks, CI/CD pipelines, and AI-assisted testing.
