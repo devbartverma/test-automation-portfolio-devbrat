@@ -1,84 +1,135 @@
 # Test Automation Portfolio – Devbrat Verma
 
-A modern UI test automation framework built with **TypeScript** and **Playwright**, demonstrating scalable test architecture, maintainable automation design patterns, and QA engineering best practices used in enterprise software development.
+A multi-language, enterprise-grade test automation portfolio showcasing scalable QA automation frameworks built using **Playwright, Cypress, SpecFlow, Reqnroll, Serenity BDD, TypeScript, C#, Java, Python, and Groovy**.
 
-> Framework designed and implemented by Devbrat Verma to demonstrate enterprise-grade UI test automation using Playwright, TypeScript, Page Object Model (POM), reporting, and scalable test architecture.
+This repository demonstrates real-world **Quality Engineering practices** across UI, API, and end-to-end automation, structured as a modular monorepo containing multiple automation frameworks.
 
-## Overview
+---
 
-This repository showcases my approach to designing and implementing robust automated testing solutions. The framework includes end-to-end test scenarios against public demo applications and demonstrates clean code practices, maintainability, and reliability in test automation.
+## 📁 Repository Structure
 
-## Technology Stack
+This portfolio is organized into independent automation frameworks:
 
-* Playwright
-* TypeScript
-* Page Object Model (POM)
-* Playwright Test Runner
-* HTML Reporting
-* Data-Driven Testing
-* Cross-Browser Execution
+automation-portfolio/
 
-## Framework Features
+├── dotnet-automation/
+│   ├── playwright-csharp-framework/
+│   ├── playwright-reqnroll-framework/
+│   ├── playwright-specflow-framework/
+│   └── api-restsharp-framework/
+│
+├── java-automation/
+│   ├── serenity-bdd-selenium/
+│   ├── playwright-java-framework/
+│   └── restassured-api-framework/
+│
+├── javascript-typescript-automation/
+│   ├── playwright-typescript-framework/
+│   ├── cypress-framework/
+│   └── mocha-chai-selenium/
+│
+├── python-automation/
+│   ├── playwright-pytest-framework/
+│   └── api-pytest-framework/
+│
+└── README.md
+
+Each folder represents a **separate automation framework implementation**, demonstrating scalable architecture, reusable design patterns, and enterprise QA best practices.
+
+---
+
+## 🚀 Overview
+
+This portfolio demonstrates my expertise in designing and implementing robust automation frameworks with:
+
+- Scalable test architecture design
+- Multi-language automation frameworks
+- UI + API + End-to-End test coverage
+- BDD-based and hybrid automation strategies
+- CI/CD-integrated test execution pipelines
+- AI-assisted QA automation practices
+
+---
+
+## 🧰 Technology Stack
+
+### UI Automation
+- Playwright (TypeScript / Java / C# / Python)
+- Cypress (JavaScript / TypeScript)
+- Selenium (Java-based frameworks)
+
+### BDD Frameworks
+- SpecFlow (.NET)
+- Reqnroll (.NET)
+- Serenity BDD (Java)
+
+### Programming Languages
+- TypeScript
+- JavaScript
+- C#
+- Java
+- Python
+- Groovy
+
+### QA Engineering Practices
+- Page Object Model (POM)
+- Data-driven testing
+- Cross-browser testing (Chromium, Firefox, WebKit)
+- Parallel execution strategies
+- Test reporting (HTML, traces, screenshots)
+- CI/CD integration (GitHub Actions, Jenkins)
+- AI-assisted test automation
+
+---
+
+## 🏗️ Framework Features
 
 ### Architecture & Design
-
-* Page Object Model (POM) implementation
-* Reusable and maintainable page classes
-* Centralized test data management
-* Clear separation of test logic and page interactions
-* Scalable framework structure suitable for enterprise projects
+- Modular and scalable test framework structure
+- Page Object Model (POM) implementation
+- Reusable page classes and utilities
+- Separation of test logic and page actions
+- Centralized test data management
 
 ### Automation Best Practices
+- Reliable locator strategies to reduce flaky tests
+- Data-driven and parameterized testing
+- Cross-browser execution support
+- Built-in tracing, screenshots, and reporting
+- Positive and negative scenario coverage
+- Reusable components and utilities
 
-* Reliable locator strategies to minimize flaky tests
-* Data-driven test execution
-* Cross-browser testing (Chromium, Firefox, WebKit)
-* Built-in screenshots, traces, and reporting
-* Positive and negative scenario coverage
-* Reusable test components and utilities
+---
 
-## Sample Automated Scenarios
+## 🧪 Sample Test Coverage
 
-The framework currently includes automated coverage for:
+Across frameworks, automation covers:
 
-* User authentication
-* Product inventory validation
-* Shopping cart workflows
-* Checkout process validation
-* UI assertions and business flow verification
+- Authentication & login workflows
+- Product inventory validation
+- Shopping cart and checkout flows
+- UI regression testing
+- API validation integrated with UI flows
+- End-to-end business process testing
 
-## Project Structure
+---
 
-```text
-playwrite/
-├── Pages/
-│   ├── LoginPage.ts
-│   ├── InventoryPage.ts
-│   ├── CartPage.ts
-│   └── CheckoutPage.ts
-│
-├── data/
-│   └── testData.ts
-│
-├── tests/
-│   ├── auth.spec.ts
-│   ├── inventory.spec.ts
-│   ├── cart.spec.ts
-│   └── checkout.spec.ts
-│
-├── playwright.config.ts
-├── package.json
-└── package-lock.json
-```
+## 🎯 Purpose
 
-## Purpose
+This portfolio demonstrates my ability to:
 
-This portfolio project demonstrates my expertise in designing, developing, and maintaining modern test automation frameworks. It reflects the engineering practices I use to build scalable, reliable, and maintainable automation solutions for web applications.
+- Design enterprise-grade automation frameworks
+- Build scalable multi-language QA solutions
+- Implement hybrid UI + API automation strategies
+- Integrate automation into CI/CD pipelines
+- Apply AI-assisted testing techniques
+- Deliver maintainable and production-ready test frameworks
 
-## Author
+---
 
-**Devbrat Verma**
+## 👨‍💻 Author
 
-Senior SDET | Quality Engineering Lead
+**Devbrat Verma**  
+Senior QA Automation Engineer | SDET | Quality Engineering Lead 
 
-Specialized in Test Automation, Quality Engineering, and DevOps practices using Playwright, Cypress, Serenity BDD, SpecFlow, Reqnroll, JavaScript, TypeScript, Java, Groovy, and C#, with expertise in scalable automation frameworks, CI/CD pipelines, and AI-assisted testing.
+Specialized in enterprise test automation, QA architecture, and DevOps-driven quality engineering using Playwright, Cypress, Serenity BDD, SpecFlow, Reqnroll, Java, C#, Python, and Groovy, with strong focus on scalable automation frameworks, CI/CD pipelines, and AI-assisted testing.
