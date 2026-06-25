@@ -5,3 +5,4 @@ obj/
 test.txt
 dotnet-automation/obj/
 dotnet-automation/bin/
+test-results/
