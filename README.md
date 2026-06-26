@@ -6,6 +6,8 @@
 [![.NET (NUnit)](https://github.com/devbartverma/test-automation-portfolio-devbrat/actions/workflows/dotnet.yml/badge.svg)](https://github.com/devbartverma/test-automation-portfolio-devbrat/actions/workflows/dotnet.yml)
 [![.NET (Reqnroll)](https://github.com/devbartverma/test-automation-portfolio-devbrat/actions/workflows/reqnroll.yml/badge.svg)](https://github.com/devbartverma/test-automation-portfolio-devbrat/actions/workflows/reqnroll.yml)
 
+> 🎭 **One engine, five stacks — every suite is built on [Playwright](https://playwright.dev).**
+
 A multi-language Playwright automation portfolio demonstrating Page Object Model design,
 both **UI and API** layers, parallel-safe execution, failure artifacts, and a GitHub Actions
 CI pipeline — across TypeScript, C# (.NET 8 — NUnit **and** Reqnroll BDD), Java (Groovy/Spock), and Python.
