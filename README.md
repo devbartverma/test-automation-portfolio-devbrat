@@ -28,8 +28,56 @@ Each suite covers the **same 15 UI scenarios** (SauceDemo) plus **3 API contract
 
 ## 🎯 Target Application
 
-* **URL:** [https://www.saucedemo.com](https://www.saucedemo.com)
-* **Credentials:** `standard_user` / `secret_sauce`
+* **UI:** [https://www.saucedemo.com](https://www.saucedemo.com) — credentials `standard_user` / `secret_sauce`
+* **API:** [https://jsonplaceholder.typicode.com](https://jsonplaceholder.typicode.com) — free public REST API
+
+---
+
+## ▶️ Running the Tests
+
+`cd` into the folder first. `PWDEBUG=1` opens the Playwright Inspector (step through, pauses) and works in every stack.
+
+### TypeScript — `js-ts-automation`
+```bash
+npm install && npx playwright install     # one-time
+npm test                                   # all (UI cross-browser + API)
+npx playwright test --headed               # headed
+npx playwright test --debug                # debug (Inspector)
+npx playwright test --ui                   # UI mode — time-travel & watch
+npx playwright show-report                 # open the HTML report
+```
+
+### C# / .NET — `dotnet-automation`
+```bash
+dotnet test                                # all (headless)
+HEADED=1 dotnet test                       # headed
+PWDEBUG=1 dotnet test                      # debug (Inspector)
+dotnet test --filter "Name~Checkout"       # run a subset
+dotnet test --logger "trx;LogFileName=results.trx"   # TRX report
+```
+
+### Java — `java-automation`  *(requires Maven)*
+```bash
+mvn test                                   # all (headless)
+HEADLESS=false mvn test                    # headed
+PWDEBUG=1 mvn test                         # debug (Inspector)
+mvn test -Dtest=ApiSpec                    # just the Spock API spec
+mvn surefire-report:report                 # → target/site/surefire-report.html
+```
+
+### Python — `python-automation`
+```bash
+python -m venv venv && source venv/bin/activate        # one-time
+pip install -r requirements.txt && playwright install  # one-time
+pytest                                     # all (headless)
+pytest --headed --slowmo 500               # headed + slowed down
+PWDEBUG=1 pytest                           # debug (Inspector)
+pytest -n auto                             # parallel (xdist)
+pytest --html=report.html --self-contained-html        # report (pip install pytest-html)
+```
+
+> Headed toggles per framework: `--headed` (TS / Python), `HEADED=1` (.NET), `HEADLESS=false` (Java).
+> Failure artifacts land in each suite's report / `screenshots/` (`target/screenshots/` for Java).
 
 ---
 
