@@ -1,6 +1,10 @@
 # Test Automation Portfolio – Devbrat Verma
 
-[![CI](https://github.com/devbartverma/test-automation-portfolio-devbrat/actions/workflows/ci.yml/badge.svg)](https://github.com/devbartverma/test-automation-portfolio-devbrat/actions/workflows/ci.yml)
+[![TypeScript (Playwright)](https://github.com/devbartverma/test-automation-portfolio-devbrat/actions/workflows/typescript.yml/badge.svg)](https://github.com/devbartverma/test-automation-portfolio-devbrat/actions/workflows/typescript.yml)
+[![Python (pytest)](https://github.com/devbartverma/test-automation-portfolio-devbrat/actions/workflows/python.yml/badge.svg)](https://github.com/devbartverma/test-automation-portfolio-devbrat/actions/workflows/python.yml)
+[![Java (Spock)](https://github.com/devbartverma/test-automation-portfolio-devbrat/actions/workflows/java.yml/badge.svg)](https://github.com/devbartverma/test-automation-portfolio-devbrat/actions/workflows/java.yml)
+[![.NET (NUnit)](https://github.com/devbartverma/test-automation-portfolio-devbrat/actions/workflows/dotnet.yml/badge.svg)](https://github.com/devbartverma/test-automation-portfolio-devbrat/actions/workflows/dotnet.yml)
+[![.NET (Reqnroll)](https://github.com/devbartverma/test-automation-portfolio-devbrat/actions/workflows/reqnroll.yml/badge.svg)](https://github.com/devbartverma/test-automation-portfolio-devbrat/actions/workflows/reqnroll.yml)
 
 A multi-language Playwright automation portfolio demonstrating Page Object Model design,
 both **UI and API** layers, parallel-safe execution, failure artifacts, and a GitHub Actions
@@ -109,7 +113,7 @@ pytest --html=report.html --self-contained-html        # report (pip install pyt
 
 ## ⚡ Engineering Practices
 
-- **CI/CD** — GitHub Actions runs all five suites on every push/PR (see the badge above); failure artifacts are uploaded per job
+- **CI/CD** — GitHub Actions runs all five suites on every push/PR (see the badges above); failure artifacts are uploaded per job
 - **Two test layers** — UI (Playwright) **and** API/contract (Playwright `APIRequest` / `requests`), so checks live at the cheapest reliable level
 - **Parallel-safe by design** — TypeScript `fullyParallel`; Python isolates a browser per test (runs under `pytest -n auto`); Java uses a `ThreadLocal` factory; .NET `PageTest` gives each test its own context
 - **Failure artifacts everywhere** — trace + screenshot + video (TS) and screenshot-on-failure hooks (Python / Java / .NET)
