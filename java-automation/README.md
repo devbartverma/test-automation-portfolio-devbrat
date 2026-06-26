@@ -37,12 +37,12 @@ java-automation/
 
 ## Technology Stack
 
-- **Java 11+** - Programming language
-- **Playwright** - Browser automation framework
-- **Groovy** - BDD-style test writing
-- **JUnit 5 (Jupiter)** - Test framework
-- **Maven** - Build and dependency management
-- **Logback** - Logging framework
+- **Java 17** + **Maven** — build & dependency management
+- Defined in [`pom.xml`](pom.xml):
+  - `com.microsoft.playwright:playwright` 1.60.0
+  - `org.apache.groovy:groovy` / `groovy-json` 4.0.24
+  - `org.spockframework:spock-core` 2.3-groovy-4.0 (true BDD API spec)
+  - `org.junit.jupiter` 5.10.0 · SLF4J + Logback logging
 
 ## Prerequisites
 
@@ -160,86 +160,10 @@ Target: `https://jsonplaceholder.typicode.com`. **No browser launched.**
 - **Readable BDD intent** — every test carries a Given/When/Then `@DisplayName`.
 - **Cross-language parity** — the same 15 scenarios exist in TypeScript, Python, Java and C#.
 
-## Page Objects
+## Author
 
-### LoginPage
-Handles login functionality and authentication flows.
-
-### InventoryPage
-Manages product listing, sorting, and cart operations.
-
-### CartPage
-Handles shopping cart operations and checkout navigation.
-
-### CheckoutPage
-Manages checkout process including customer info and order completion.
-
-### ProductDetailPage
-Handles product detail page interactions and assertions.
-
-## Test Data
-
-Test data is centralized in the `data` package:
-
-- **TestData.java** - Users, URLs, error messages, and customer data
-- **ProductData.java** - Product names, add-to-cart IDs, and sort options
-
-## BDD Style
-
-Tests are written in Groovy using BDD (Behavior-Driven Development) style with Given-When-Then structure:
-
-```groovy
-@Test
-@DisplayName("Given I navigate to login page When I login with valid credentials Then I should be logged in successfully")
-void "standard user can login"() {
-    // Given - page is already at login
-    // When
-    loginPage.login(TestData.Users.STANDARD_USERNAME, TestData.Users.STANDARD_PASSWORD)
-    // Then
-    loginPage.assertLoggedIn()
-}
-```
-
-## Best Practices Implemented
-
-✅ **Page Object Model** - Clear separation of test logic and page interactions  
-✅ **Test Data Management** - Centralized test data and constants  
-✅ **Factory Pattern** - Browser instance management with PlaywrightFactory  
-✅ **BDD Style** - Human-readable test descriptions using Given-When-Then  
-✅ **JUnit 5** - Modern Java testing framework with annotations and lifecycle hooks  
-✅ **Assertions** - Clear and descriptive assertions  
-✅ **Base Test Class** - Reusable setup and teardown logic  
-
-## Debugging
-
-To run tests in headed mode (see browser), modify `PlaywrightFactory.java`:
-
-```java
-browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
-```
-
-For slow motion and debugging:
-```java
-browser = playwright.chromium().launch(new BrowserType.LaunchOptions()
-    .setHeadless(false)
-    .setSlowMo(1000));
-```
-
-## Continuous Integration
-
-The framework is ready for CI/CD integration. Run tests in headless mode in CI pipelines:
-
-```bash
-mvn test -DargLine=--headless
-```
-
-## Contributing
-
-1. Create a new branch for your feature
-2. Write tests using the BDD style
-3. Follow the page object model pattern
-4. Run all tests before submitting a pull request
+**Devbrat Verma** — Senior QA Automation Engineer | SDET
 
 ## License
 
-MIT License - See LICENSE file for details
+MIT — see the repository `LICENSE`.

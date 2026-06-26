@@ -34,6 +34,8 @@ reqnroll-automation/
 - **Playwright for .NET** — UI driving and `IAPIRequestContext` for API tests
 - **Page Object Model**, centralized test data, `data-test` locators
 
+Defined in [`ReqnrollPlaywright.csproj`](ReqnrollPlaywright.csproj): `Microsoft.Playwright` 1.61.0 · `Reqnroll.NUnit` 2.1.0 · `NUnit` 3.14.0 · `NUnit3TestAdapter` 4.6.0 · `Microsoft.NET.Test.Sdk` 17.11.1 (`net8.0`).
+
 ## Prerequisites
 
 - .NET 8 SDK

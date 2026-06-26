@@ -35,6 +35,8 @@ js-ts-automation/
 - **Cross-browser** — Chromium, Firefox, WebKit
 - **HTML reporter** with trace-on-first-retry
 
+Defined in [`package.json`](package.json): `@playwright/test` ^1.61.1 · `@types/node` ^26 (Node 18+).
+
 ## Prerequisites
 
 - Node.js 18+

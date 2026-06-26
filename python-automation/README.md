@@ -40,10 +40,10 @@ python-automation/
 
 ## Technology Stack
 
-- **Python 3.8+** - Programming language
-- **Playwright Python** - Browser automation framework
-- **pytest** - Testing framework with BDD plugins
-- **python-dotenv** - Environment variable management
+- **Python 3.8+** + **pytest**
+- Defined in [`requirements.txt`](requirements.txt):
+  - `playwright` 1.60.0 · `pytest` 7.4.3 · `pytest-xdist` 3.5.0 (parallel)
+  - `requests` 2.31.0 (API tests) · `python-dotenv` 1.0.0
 
 ## Prerequisites
 
@@ -175,106 +175,10 @@ Target: `https://jsonplaceholder.typicode.com` (via `requests`). **No browser la
 - **Readable BDD intent** — every test carries a Given/When/Then docstring.
 - **Cross-language parity** — the same 15 scenarios exist in TypeScript, Python, Java and C#.
 
-## Page Objects
+## Author
 
-### LoginPage
-Handles login functionality and authentication flows.
-
-### InventoryPage
-Manages product listing, sorting, and cart operations.
-
-### CartPage
-Handles shopping cart operations and checkout navigation.
-
-### CheckoutPage
-Manages checkout process including customer info and order completion.
-
-### ProductDetailPage
-Handles product detail page interactions and assertions.
-
-## Test Data
-
-Test data is centralized in the `data` package:
-
-- **test_data.py** - Users, URLs, error messages, and customer data
-- **product_data.py** - Product names, add-to-cart IDs, and sort options
-
-## BDD Style
-
-Tests are written using descriptive test names and docstrings following Given-When-Then structure:
-
-```python
-def test_standard_user_can_login(self, page):
-    """
-    Given: I navigate to login page
-    When: I login with valid credentials
-    Then: I should be logged in successfully
-    """
-    # Given - page is already at login
-    login_page = LoginPage(page)
-    login_page.go_to()
-    
-    # When
-    login_page.login(Users.STANDARD_USERNAME, Users.STANDARD_PASSWORD)
-    
-    # Then
-    login_page.assert_logged_in()
-```
-
-## Best Practices Implemented
-
-✅ **Page Object Model** - Clear separation of test logic and page interactions
-✅ **Test Data Management** - Centralized test data and constants
-✅ **Factory Pattern** - Browser instance management with PlaywrightFactory
-✅ **BDD Style** - Descriptive test names and Given-When-Then structure
-✅ **pytest Fixtures** - Reusable fixtures for setup and teardown
-✅ **Assertions** - Clear and descriptive assertions
-✅ **Conftest** - Centralized pytest configuration and fixtures
-✅ **Virtual Environment** - Isolated Python environment
-
-## Debugging
-
-To run tests in headed mode (see browser):
-
-```bash
-pytest --headed
-```
-
-For debugging with pdb:
-```bash
-pytest --pdb
-```
-
-For slow motion:
-```bash
-pytest --slowmo 1000
-```
-
-## Environment Variables
-
-Create a `.env` file based on `.env.example`:
-
-```env
-HEADLESS=False
-SLOWMO=0
-TIMEOUT=30000
-```
-
-## Continuous Integration
-
-The framework is ready for CI/CD integration. Run tests in headless mode:
-
-```bash
-pytest --headed=False
-```
-
-## Contributing
-
-1. Create a new branch for your feature
-2. Write tests using descriptive names
-3. Follow the page object model pattern
-4. Run all tests before submitting a pull request
+**Devbrat Verma** — Senior QA Automation Engineer | SDET
 
 ## License
 
-MIT License - See LICENSE file for details
+MIT — see the repository `LICENSE`.

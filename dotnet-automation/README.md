@@ -10,33 +10,10 @@ This repository showcases my approach to designing and implementing robust autom
 
 ## Technology Stack
 
-* C#
-* .NET 8
-* Playwright for .NET
-* NUnit
-* Page Object Model (POM)
-* HTML Reporting
-* Data-Driven Testing
-* Cross-Browser Execution
-
-## Framework Features
-
-### Architecture & Design
-
-* Page Object Model (POM) implementation
-* Reusable and maintainable page classes
-* Centralized test data management
-* Clear separation of test logic and page interactions
-* Scalable framework structure suitable for enterprise projects
-
-### Automation Best Practices
-
-* Reliable locator strategies to minimize flaky tests
-* Data-driven test execution
-* Cross-browser testing (Chromium, Firefox, WebKit)
-* Detailed execution reporting and test artifacts
-* Positive and negative scenario coverage
-* Reusable test components and utilities
+* **C# / .NET 8** (`net8.0`) — Page Object Model, data-driven, cross-browser
+* Defined in [`CSharpPlaywright.csproj`](CSharpPlaywright.csproj):
+  * `Microsoft.Playwright` 1.61.0 · `Microsoft.Playwright.NUnit` 1.61.0
+  * `NUnit` 3.13.3 · `NUnit3TestAdapter` 4.6.0 · `Microsoft.NET.Test.Sdk` 17.8.0
 
 ## 🧪 Test Suite — 15 Scenarios
 
@@ -136,10 +113,6 @@ csharp-automation/
 ├── CSharpPlaywright.csproj
 └── README.md
 ```
-
-## Purpose
-
-This portfolio project demonstrates my expertise in designing, developing, and maintaining modern test automation frameworks using Playwright for .NET and C#. It reflects the engineering practices I use to build scalable, reliable, and maintainable automation solutions for web applications.
 
 ## Author
 

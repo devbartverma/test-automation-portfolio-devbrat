@@ -63,6 +63,7 @@ dotnet build
 pwsh bin/Debug/net8.0/playwright.ps1 install chromium   # one-time
 dotnet test                                # all Gherkin scenarios (headless)
 HEADED=1 dotnet test                       # headed
+PWDEBUG=1 dotnet test                      # debug (Inspector)
 dotnet test --filter "FullyQualifiedName~Checkout"   # a subset
 ```
 
@@ -86,7 +87,7 @@ pytest -n auto                             # parallel (xdist)
 pytest --html=report.html --self-contained-html        # report (pip install pytest-html)
 ```
 
-> Headed toggles per framework: `--headed` (TS / Python), `HEADED=1` (.NET), `HEADLESS=false` (Java).
+> **Headless is the default** in every stack. Headed toggles: `--headed` (TS / Python), `HEADED=1` (both C# suites), `HEADLESS=false` (Java). Debug anywhere with `PWDEBUG=1` (opens the Playwright Inspector).
 > Failure artifacts land in each suite's report / `screenshots/` (`target/screenshots/` for Java).
 
 ---
