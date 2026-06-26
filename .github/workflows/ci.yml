@@ -98,3 +98,25 @@ jobs:
           name: screenshots-dotnet
           path: dotnet-automation/**/screenshots
           retention-days: 7
+
+  reqnroll:
+    name: .NET BDD (Reqnroll)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: reqnroll-automation
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - run: dotnet build --configuration Debug
+      - name: Install Playwright browsers
+        run: pwsh bin/Debug/net8.0/playwright.ps1 install --with-deps chromium
+      - run: dotnet test --no-build --logger "trx;LogFileName=results.trx"
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: screenshots-reqnroll
+          path: reqnroll-automation/**/screenshots
+          retention-days: 7

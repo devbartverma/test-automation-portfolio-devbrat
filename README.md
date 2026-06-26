@@ -4,9 +4,9 @@
 
 A multi-language Playwright automation portfolio demonstrating Page Object Model design,
 both **UI and API** layers, parallel-safe execution, failure artifacts, and a GitHub Actions
-CI pipeline — across TypeScript, C# (.NET 8), Java (Groovy/Spock), and Python.
+CI pipeline — across TypeScript, C# (.NET 8 — NUnit **and** Reqnroll BDD), Java (Groovy/Spock), and Python.
 
-Every stack runs the **same 18 tests** (15 UI + 3 API) so the four are directly comparable.
+Every stack runs the **same 18 tests** (15 UI + 3 API) so the five suites are directly comparable.
 
 ---
 
@@ -16,6 +16,7 @@ Every stack runs the **same 18 tests** (15 UI + 3 API) so the four are directly 
 |----------|----------|-------------|----|-----|--------------|
 | TypeScript | `/js-ts-automation` | Playwright Test | 15 | 3 | [README](js-ts-automation/README.md) |
 | C# / .NET 8 | `/dotnet-automation` | NUnit | 15 | 3 | [README](dotnet-automation/README.md) |
+| C# / .NET 8 (BDD) | `/reqnroll-automation` | Reqnroll + NUnit | 15 | 3 | [README](reqnroll-automation/README.md) |
 | Java + Groovy | `/java-automation` | JUnit 5 + Spock | 15 | 3 | [README](java-automation/README.md) |
 | Python | `/python-automation` | pytest | 15 | 3 | [README](python-automation/README.md) |
 
@@ -54,6 +55,15 @@ HEADED=1 dotnet test                       # headed
 PWDEBUG=1 dotnet test                      # debug (Inspector)
 dotnet test --filter "Name~Checkout"       # run a subset
 dotnet test --logger "trx;LogFileName=results.trx"   # TRX report
+```
+
+### C# / Reqnroll BDD — `reqnroll-automation`
+```bash
+dotnet build
+pwsh bin/Debug/net8.0/playwright.ps1 install chromium   # one-time
+dotnet test                                # all Gherkin scenarios (headless)
+HEADED=1 dotnet test                       # headed
+dotnet test --filter "FullyQualifiedName~Checkout"   # a subset
 ```
 
 ### Java — `java-automation`  *(requires Maven)*
