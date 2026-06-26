@@ -6,6 +6,7 @@ import com.automation.pages.InventoryPage
 import com.automation.pages.ProductDetailPage
 import com.automation.data.TestData
 import com.automation.data.ProductData
+import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 
@@ -16,6 +17,7 @@ class InventoryTests extends BaseTest {
     private LoginPage loginPage
     private InventoryPage inventoryPage
 
+    @BeforeEach
     @Override
     void setUp() {
         super.setUp()

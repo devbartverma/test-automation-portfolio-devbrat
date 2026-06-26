@@ -5,6 +5,7 @@ import com.automation.pages.LoginPage
 import com.automation.data.TestData
 import com.microsoft.playwright.options.AriaRole
 import com.microsoft.playwright.Page
+import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 
@@ -14,6 +15,7 @@ import static org.junit.jupiter.api.Assertions.*
 class AuthTests extends BaseTest {
     private LoginPage loginPage
 
+    @BeforeEach
     @Override
     void setUp() {
         super.setUp()

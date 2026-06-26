@@ -13,12 +13,12 @@
     <description>Enterprise-grade Playwright automation framework using Java and Groovy</description>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <playwright.version>1.40.0</playwright.version>
+        <playwright.version>1.60.0</playwright.version>
         <junit.version>5.10.0</junit.version>
-        <groovy.version>4.0.0</groovy.version>
+        <groovy.version>4.0.24</groovy.version>
         <spock.version>2.3-groovy-4.0</spock.version>
     </properties>
 
@@ -35,7 +35,7 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
             <version>${junit.version}</version>
-            <scope>test</scope>
+            <!-- compile scope: page objects in src/main use Assertions.* -->
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -55,6 +55,12 @@
             <groupId>org.apache.groovy</groupId>
             <artifactId>groovy</artifactId>
             <version>${groovy.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.groovy</groupId>
+            <artifactId>groovy-json</artifactId>
+            <version>${groovy.version}</version>
+            <scope>test</scope>
         </dependency>
 
         <!-- Spock for BDD -->
@@ -87,8 +93,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version>
                 <configuration>
-                    <source>11</source>
-                    <target>11</target>
+                    <source>17</source>
+                    <target>17</target>
                 </configuration>
             </plugin>
             <plugin>
