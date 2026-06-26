@@ -1,0 +1,13 @@
+# Virtual environment
+venv/
+.venv/
+
+# Test / Playwright artifacts
+screenshots/
+report.html
+.pytest_cache/
+results.xml
+
+# Python caches
+__pycache__/
+*.py[cod]
