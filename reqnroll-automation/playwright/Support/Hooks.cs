@@ -20,6 +20,12 @@ public class Hooks
         _scenario = scenario;
     }
 
+    // Readable scenario header in the test log; individual Given/When/Then steps
+    // are traced by Reqnroll itself and shown under `console;verbosity=detailed`.
+    [BeforeScenario(Order = 0)]
+    public void LogScenarioTitle() =>
+        Console.WriteLine($"\nSCENARIO: {_scenario.ScenarioInfo.Title}");
+
     [BeforeScenario("@ui")]
     public async Task StartBrowserAsync() => await _driver.StartBrowserAsync();
 

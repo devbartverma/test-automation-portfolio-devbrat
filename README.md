@@ -92,7 +92,7 @@ pytest --html=report.html --self-contained-html        # report (pip install pyt
 
 ---
 
-## ✅ Test Coverage (identical in all 4 languages)
+## ✅ Test Coverage (identical across all 5 suites)
 
 **UI — SauceDemo (15)**
 - **Authentication** (4) — valid login, locked-out user + error icon, invalid credentials, logout & route protection
@@ -109,13 +109,13 @@ pytest --html=report.html --self-contained-html        # report (pip install pyt
 
 ## ⚡ Engineering Practices
 
-- **CI/CD** — GitHub Actions runs all four suites on every push/PR (see the badge above); failure artifacts are uploaded per job
+- **CI/CD** — GitHub Actions runs all five suites on every push/PR (see the badge above); failure artifacts are uploaded per job
 - **Two test layers** — UI (Playwright) **and** API/contract (Playwright `APIRequest` / `requests`), so checks live at the cheapest reliable level
 - **Parallel-safe by design** — TypeScript `fullyParallel`; Python isolates a browser per test (runs under `pytest -n auto`); Java uses a `ThreadLocal` factory; .NET `PageTest` gives each test its own context
 - **Failure artifacts everywhere** — trace + screenshot + video (TS) and screenshot-on-failure hooks (Python / Java / .NET)
 - **Genuinely data-driven** — parameterized tests (`@TestCase`, `@pytest.mark.parametrize`, Spock `where:`, TS loop), not just centralized constants
-- **Real BDD in Spock** — the Java API suite uses true `given/when/then/where` blocks
-- **Page Object Model** + centralized test data across all 4 languages
+- **Real BDD** — Reqnroll Gherkin features (with step-by-step logging) and the Java Spock API spec use true `given/when/then`
+- **Page Object Model** + centralized test data across all 5 suites
 - **Resilient locators** (`data-test`) with auto-waiting — no hard sleeps
 - **Financial assertion** — `subtotal + tax = total` verified in every UI suite
 
