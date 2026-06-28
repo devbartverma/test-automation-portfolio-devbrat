@@ -132,6 +132,8 @@ pytest --html=report.html --self-contained-html        # report (pip install pyt
 **Devbrat Verma** — Senior QA Automation Engineer  
 [GitHub](https://github.com/devbartverma)
 
+🎓 Oracle Cloud Infrastructure 2025 Certified Generative AI Professional — [view credential](https://catalog-education.oracle.com/ords/certview/sharebadge?id=36E0603D1FAF3A0D5B694DBDC0D1A159E4EEFD9AA8367181C70320B0B6438CF1)
+
 ---
 
 ## 📄 License
