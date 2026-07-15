@@ -62,9 +62,11 @@ class AuthTests extends BaseTest {
         // When
         page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Open Menu")).click()
         page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Logout")).click()
+        page.waitForURL(TestData.Urls.BASE + "/")
         // Then
         assertEquals(TestData.Urls.BASE, page.url().replaceAll("/\$", ""), "User should be redirected to login after logout")
         page.navigate(TestData.Urls.INVENTORY)
+        page.waitForURL(TestData.Urls.BASE + "/")
         assertEquals(TestData.Urls.BASE, page.url().replaceAll("/\$", ""), "Inventory access should be blocked when logged out")
     }
 }

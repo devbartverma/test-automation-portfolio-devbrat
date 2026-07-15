@@ -52,7 +52,7 @@ public class LoginPage {
 
     /** Assert the X icon exists on the error banner (visual cue for recruiters) */
     public void assertErrorIconVisible() {
-        Locator icon = getErrorMessage().locator("svg[data-icon='times']");
+        Locator icon = getErrorMessage().locator("svg[data-icon='xmark']");
         assertTrue(icon.isVisible(), "Error icon should be visible on the error banner");
     }
 }

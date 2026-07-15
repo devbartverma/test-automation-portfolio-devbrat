@@ -18,7 +18,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <playwright.version>1.60.0</playwright.version>
         <junit.version>5.10.0</junit.version>
-        <groovy.version>4.0.24</groovy.version>
+        <groovy.version>4.0.32</groovy.version>
         <spock.version>2.3-groovy-4.0</spock.version>
     </properties>
 
@@ -100,7 +100,7 @@
             <plugin>
                 <groupId>org.codehaus.gmavenplus</groupId>
                 <artifactId>gmavenplus-plugin</artifactId>
-                <version>2.1.0</version>
+                <version>4.3.1</version>
                 <executions>
                     <execution>
                         <goals>
@@ -109,6 +109,20 @@
                         </goals>
                     </execution>
                 </executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.groovy</groupId>
+                        <artifactId>groovy</artifactId>
+                        <version>${groovy.version}</version>
+                        <scope>runtime</scope>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.groovy</groupId>
+                        <artifactId>groovy-json</artifactId>
+                        <version>${groovy.version}</version>
+                        <scope>runtime</scope>
+                    </dependency>
+                </dependencies>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
