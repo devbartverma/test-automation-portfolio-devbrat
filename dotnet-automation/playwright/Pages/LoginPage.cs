@@ -51,6 +51,6 @@ public class LoginPage
     /// <summary>Assert the X icon exists on the error banner (visual cue for recruiters).</summary>
     public async Task AssertErrorIconVisibleAsync()
     {
-        Assert.That(await ErrorMessage.Locator("svg[data-icon='times']").IsVisibleAsync(), Is.True);
+        Assert.That(await ErrorMessage.Locator("svg[data-icon='xmark']").IsVisibleAsync(), Is.True);
     }
 }

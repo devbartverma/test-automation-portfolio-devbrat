@@ -32,6 +32,7 @@ public class AuthSteps
     {
         await _driver.Page.GetByRole(AriaRole.Button, new() { Name = "Open Menu" }).ClickAsync();
         await _driver.Page.GetByRole(AriaRole.Link, new() { Name = "Logout" }).ClickAsync();
+        await _driver.Page.WaitForURLAsync(Urls.Base + "/");
     }
 
     [When("I try to open the inventory directly")]

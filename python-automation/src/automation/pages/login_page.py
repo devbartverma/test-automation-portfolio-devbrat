@@ -41,5 +41,5 @@ class LoginPage:
             f"User should be redirected to {Urls.INVENTORY}, but got {self.page.url}"
 
     def assert_error_icon_visible(self):
-        icon = self.error_message.locator("svg[data-icon='times']")
-        assert icon.is_visible(), "Error icon (svg[data-icon='times']) should be visible"
+        icon = self.error_message.locator("svg[data-icon='xmark']")
+        assert icon.is_visible(), "Error icon (svg[data-icon='xmark']) should be visible"

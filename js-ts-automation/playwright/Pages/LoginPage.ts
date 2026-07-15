@@ -44,6 +44,6 @@ export class LoginPage {
 
   /** Assert the X icon exists on the error banner (visual cue for recruiters) */
   async assertErrorIconVisible(): Promise<void> {
-    await expect(this.errorMessage().locator('svg[data-icon="times"]')).toBeVisible();
+    await expect(this.errorMessage().locator('svg[data-icon="xmark"]')).toBeVisible();
   }
 }

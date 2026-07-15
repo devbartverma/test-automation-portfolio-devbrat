@@ -64,8 +64,10 @@ class TestAuthentication:
         # When
         page.get_by_role("button", name="Open Menu").click()
         page.get_by_role("link", name="Logout").click()
+        page.wait_for_url(f"{Urls.BASE}/")
 
         # Then
         assert page.url.rstrip("/") == Urls.BASE
         page.goto(Urls.INVENTORY)
+        page.wait_for_url(f"{Urls.BASE}/")
         assert page.url.rstrip("/") == Urls.BASE
